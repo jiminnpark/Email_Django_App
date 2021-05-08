@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Attachments from {{send_from}}</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <h5>From: {{send_from}}</h5>
+    <h5>To: {{email}}</h5>
+    <h5>Subject: {{subject}}</h5>
+    <div class='container' style='margin-top:50px;'><b> This email contains attachments which could be harmful we
+            recommend Downloading only if your trust the Sender!</b>
+        <div style=margin-bottom:20px;></div>
+        <form action='download' method='post'>
+            {% csrf_token %}
+            <input name='send_from' style='display:none' value={{send_from}}>
+            <input name='email' style='display:none' value={{email}}>
+            <input name='password' style='display:none' value={{password}}>
+            <button type='submit' onclick='location.href("download")' class='btn btn-danger center'> Download
+                Attachments</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
