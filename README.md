@@ -1,9 +1,6 @@
-# Mail-App-Django
-Email app
-
-# Team Member
-  - Shivanshu Suryakar 1841048
-  - Ansh Shrivas 1841049
-  - Dhiraj Shinde 1841047
-  - Sandeep Raut 1841046
-
+This is a Email App which is able to send emails from beautiful interface and also receive Inbox emails 
+Libraries used
+ - smtplib
+ - imaplib
+ - email
+The webapp is created using basic functioniities of sockets and Email protocols so you might need to turn on less secure apps on your manage gmail accoutn page.
