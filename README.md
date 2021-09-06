@@ -3,4 +3,4 @@ Libraries used
  - smtplib
  - imaplib
  - email
-The webapp is created using basic functioniities of sockets and Email protocols so you might need to turn on less secure apps on your manage gmail accoutn page.
+The webapp is created using basic functioniities of sockets and Email protocols so you might need to turn on less secure apps on your manage gmail account page.
