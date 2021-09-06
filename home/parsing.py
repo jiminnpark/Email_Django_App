@@ -1,3 +1,6 @@
+"""
+This script is created by Shivanshu Anant Suryakar - shivanshusurya192@gmail.com
+"""
 import imaplib
 import email
 import os
@@ -131,3 +134,5 @@ messages = mail.messages(subject='Christmas')
 # Messages from a specific folder
 messages = mail.messages(folder='Social')
 """
+
+# shivanshusurya192@gmail.com
